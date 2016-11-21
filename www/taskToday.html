@@ -1,0 +1,23 @@
+<div ng-repeat="task in tasks track by $index" >
+  <div class="row" ng-hide="task.done">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="{{task}}">
+          <div class="card-content white-text">
+            <span class="card-title">{{ task.text }}</span>
+            <p>{{ task.description }}</p>
+            <div class="progress">
+              <div class="determinate" style="width:{{x.progress}}% "></div>
+            </div>
+            <p>
+              <input type="checkbox" />
+            </p>
+          </div>
+        </div>
+        <div class="card-action">
+          <a href="#" data-ng-click="change()">Listo!</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
